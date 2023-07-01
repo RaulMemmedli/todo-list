@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --background: #3f72af;
+  --primary: #112d4e;
+  --secondary: #aaaaaa;
+  --cardBackground: #f9f7f7;
+  --soft: #dbe2ef;
+  --checkColor: #36cf00;
+  --todoTextColor: #000;
+}
+
+body {
+  background-color: var(--background);
+}
+
+.container {
+  border-radius: 20px;
+  width: 600px;
+  padding: 20px 55px;
+  background-color: var(--cardBackground);
+  margin: 55px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  color: var(--primary);
+  margin-bottom: 15px;
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 46px;
+}
+
+.actions-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.input-area {
+  background-color: var(--soft);
+  overflow: hidden;
+  width: 100%;
+  height: 32px;
+  border-radius: 5px;
+  border: 1px solid var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input-style {
+  width: 100%;
+  margin: 10px 11px;
+  background-color: transparent;
+  border: 0;
+}
+.input-style:focus {
+  outline: none !important;
+}
+.add-button {
+  color: white;
+  background-color: var(--secondary);
+  width: 45px;
+  height: 100%;
+  border: 0;
+}
+.add-button:hover {
+  background-color: var(--background);
+}
+.add-button:active {
+  background-color: var(--primary);
+}
+.divider {
+  width: 100%;
+  border-top: 1px solid var(--secondary);
+  margin: 15px 0;
+}
+
+.todos-container {
+  width: 100%;
+}
+
+.todo-card {
+  min-height: 55px;
+  padding: 0 20px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: var(--soft);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.checkbox {
+  padding: 3px;
+  border-radius: 5px;
+  border: 1px solid var(--secondary);
+  color: transparent;
+  display: grid;
+  place-content: center;
+}
+.checkbox-checked {
+  color: var(--checkColor) !important;
+}
+.todo-text {
+  text-decoration: none;
+  color: var(--todoTextColor);
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  padding: 10px 5px;
+}
+.todo-text-checked {
+  text-decoration: line-through !important;
+}
